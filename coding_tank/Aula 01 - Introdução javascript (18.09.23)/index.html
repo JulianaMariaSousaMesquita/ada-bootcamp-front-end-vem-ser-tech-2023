@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 01 - Introdução a JavaScript</title>
+    <script type="text/javascript" src="index.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box oval-horizontal">
+        <h1><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a></h1>
+      </div>
+      <br />
+      <div class="box retangular pequena">
+        <h2><u>Console.log</u></h2>
+        <p>
+          Console.log é usado para imprimir informações no console do navegador:
+        </p>
+        <pre><code>console.log("Olá, mundo!");</code></pre>
+
+        <ul>
+          <li>
+            Exibir mensagens de depuração para entender como o seu código está
+            funcionando.
+          </li>
+          <li>
+            Verificar o valor das variáveis e propriedades em diferentes pontos
+            do seu programa.
+          </li>
+          <li>
+            Capturar erros e exceções, permitindo uma análise mais fácil do que
+            deu errado.
+          </li>
+        </ul>
+      </div>
+
+      <div class="box retangular">
+        <h1>Tipos de Variáveis em JavaScript</h1>
+
+        <p>
+          JavaScript é uma linguagem de programação dinâmica que suporta vários
+          tipos de variáveis. Essas variáveis são usadas para armazenar
+          diferentes tipos de dados, como números, texto e objetos. Alguns dos
+          principais tipos de variáveis em JavaScript incluem:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Números (Number):</strong> Usados para representar valores
+            numéricos, como inteiros e números de ponto flutuante.
+          </li>
+          <li>
+            <strong>Strings:</strong> Usados para representar texto. As strings
+            são definidas entre aspas simples ou duplas.
+          </li>
+          <li>
+            <strong>Booleanos (Boolean):</strong> Representam valores verdadeiro
+            ou falso, úteis para lógica condicional.
+          </li>
+          <li>
+            <strong>Objetos (Object):</strong> São estruturas de dados que podem
+            conter múltiplos valores e métodos.
+          </li>
+          <li>
+            <strong>Arrays:</strong> São objetos especiais usados para armazenar
+            coleções ordenadas de valores.
+          </li>
+          <li>
+            <strong>Null e Undefined:</strong> São tipos que representam valores
+            nulos ou indefinidos.
+          </li>
+        </ul>
+        <pre><code>let idade = 30; // Variável 'idade' armazena um número</code></pre>
+      </div>
+
+      <div class="box retangular">
+        <h2>Importação de Arquivos JavaScript</h2>
+        <p>
+          Para utilizar JavaScript em uma página HTML, você precisa importar um
+          arquivo .js com a tag &lt;script&gt; no cabeçalho (<i>head</i>) ou no
+          corpo (<i>body</i>) do documento. Isso permite que você execute código
+          JavaScript na página.
+        </p>
+        <p>
+          Existem duas maneiras principais de importar um arquivo JavaScript:
+        </p>
+
+        <h3>1. Importação no Cabeçalho:</h3>
+        <p>
+          Você pode adicionar a tag &lt;script&gt; diretamente no cabeçalho do
+          documento. Isso carregará o script antes de renderizar o conteúdo da
+          página. No entanto, se você não usar o atributo <u>defer</u> ou
+          <u>async</u>, o navegador pode bloquear a renderização da página até
+          que o script seja totalmente carregado e executado.
+        </p>
+
+        <p>Exemplo:</p>
+        <pre><code>&lt;script src="seu-arquivo.js"&gt;&lt;/script&gt;</code></pre>
+
+        <h3>2. Importação no Corpo com Defer:</h3>
+        <p>
+          Uma prática recomendada é adicionar a tag &lt;script&gt; no corpo do
+          documento, geralmente antes do fechamento da tag &lt;/body&gt;, e usar
+          o atributo <u>defer</u>. Isso permite que o navegador continue a
+          renderizar a página enquanto o script é carregado em segundo plano. O
+          script é executado apenas após a renderização completa da página.
+        </p>
+
+        <p>Exemplo com <u>defer</u>:</p>
+        <pre><code>&lt;script src="seu-arquivo.js" defer&gt;&lt;/script&gt;</code></pre>
+
+        <p>
+          A opção <u>defer</u> é útil quando você deseja garantir que seu código
+          JavaScript não bloqueie a renderização da página e seja executado na
+          ordem correta após o carregamento completo da página. É especialmente
+          importante quando você possui scripts que dependem da estrutura HTML
+          da página.
+        </p>
+
+        <p>
+          Lembre-se de que você também pode usar o atributo <u>async</u> se a
+          ordem de execução não for crítica e você desejar que o script seja
+          carregado e executado assim que possível, independentemente da ordem
+          em que aparece na página.
+        </p>
+      </div>
+
+      <div class="box retangular pequena">
+        <h2>Manipulação do DOM (Document Object Model)</h2>
+        <p>
+          O DOM representa a estrutura da página web como uma árvore de objetos.
+          JavaScript pode ser usado para acessar e manipular elementos HTML
+          através do DOM:
+        </p>
+
+        <p>Exemplo de alteração de conteúdo de um elemento:</p>
+        <pre><code>&lt;div id="meuElemento"&gt;Texto antigo&lt;/div&gt;</code></pre>
+        <pre><code>let elemento = document.getElementById("meuElemento");
+            elemento.innerHTML = "Novo conteúdo";</code></pre>
+
+        <p>Exemplo de adição de um novo elemento:</p>
+        <pre><code>&lt;div id="container"&gt;&lt;/div&gt;</code></pre>
+        <pre><code>let container = document.getElementById("container");
+            let novoElemento = document.createElement("p");
+            novoElemento.textContent = "Novo parágrafo";
+            container.appendChild(novoElemento);</code></pre>
+
+        <p>Exemplo de remoção de um elemento:</p>
+        <pre><code>&lt;div id="elementoParaRemover"&gt;&lt;/div&gt;</code></pre>
+        <pre><code>let elementoParaRemover = document.getElementById("elementoParaRemover");
+            elementoParaRemover.parentNode.removeChild(elementoParaRemover);</code></pre>
+      </div>
+      <div class="box retangular">
+        <h2>Variáveis e Tipos em JavaScript</h2>
+        <p>
+          Em JavaScript, você pode declarar variáveis usando <code>let</code>,
+          <code>const</code> e <code>var</code>.
+        </p>
+        <p>
+          Essas diferenças existem para fornecer controle sobre o escopo e a
+          mutabilidade das variáveis, permitindo que você escolha a ferramenta
+          certa para o trabalho.
+        </p>
+      </div>
+      <br />
+      <div class="box retangular pequena">
+        <h3><code>let</code></h3>
+        <ul>
+          <li>
+            Tem escopo de bloco, ou seja, é visível apenas dentro do bloco onde
+            foi declarado.
+          </li>
+          <li>Pode ser reatribuído (ter seu valor alterado).</li>
+          <li>
+            Recomendado para a maioria das variáveis devido ao escopo mais
+            restrito.
+          </li>
+        </ul>
+      </div>
+      <div class="box retangular pequena">
+        <h3><code>const</code></h3>
+        <ul>
+          <li>Também tem escopo de bloco.</li>
+          <li>Não pode ser reatribuído (seu valor não pode ser alterado).</li>
+          <li>
+            Recomendado para variáveis cujo valor não deve mudar após a
+            atribuição inicial.
+          </li>
+        </ul>
+      </div>
+      <div class="box retangular pequena">
+        <h3><code>var</code></h3>
+        <ul>
+          <li>Tem escopo de função ou escopo global.</li>
+          <li>Pode ser reatribuído.</li>
+          <li>
+            Menos recomendado devido ao escopo mais amplo e potencial para
+            comportamento inesperado.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

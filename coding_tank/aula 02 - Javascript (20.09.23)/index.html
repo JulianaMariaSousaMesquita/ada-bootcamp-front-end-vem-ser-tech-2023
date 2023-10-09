@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 01 - Introdução a JavaScript</title>
+    <script type="text/javascript" src="index.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box oval-horizontal">
+        <h1>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+            target="_blank"
+            >JavaScript</a
+          >
+        </h1>
+      </div>
+      <br />
+      <div class="box retangular pequena">
+        <h1>Tipos de Dados em JavaScript</h1>
+        <p>
+          JavaScript é uma linguagem de programação dinamicamente tipada, o que
+          significa que as variáveis podem conter diferentes tipos de dados em
+          momentos diferentes durante a execução do programa. Existem vários
+          tipos de dados em JavaScript, e eles podem ser divididos em categorias
+          principais, incluindo números, strings, booleanos, objetos, e valores
+          especiais. Vamos explorar cada um deles.
+        </p>
+      </div>
+      <div class="box retangular">
+        <h2>Formatação de Números</h2>
+        <p>
+          JavaScript permite formatar números para melhor legibilidade. Você
+          pode usar sublinhados para separar grupos de dígitos em números
+          inteiros e notação exponencial para lidar com números muito grandes ou
+          muito pequenos.
+        </p>
+        <pre>
+    <code>
+let numeroGrande = 1_000_000; // 1 milhão
+let numeroExponencial = 3.0e8; // 300 milhões (notação exponencial)
+    </code>
+  </pre>
+
+        <p>
+          Entender os tipos de dados em JavaScript é fundamental para
+          desenvolver aplicativos eficazes. Cada tipo de dado tem seu papel
+          específico e características próprias, permitindo que você modele e
+          manipule informações de maneira eficiente em seus programas.
+        </p>
+      </div>
+
+      <div class="box retangular">
+        <h1>Array em JavaScript</h1>
+
+        <h2>Indexação numérica</h2>
+        <p>Os elementos de um array são acessados usando índices numéricos:</p>
+        <pre>
+          <code>
+      let meuArray = [1, 2, 3];
+      console.log(meuArray[0]); // 1
+          </code>
+        </pre>
+
+        <h2>Métodos específicos do array</h2>
+        <p>Os arrays possuem métodos embutidos para manipulação e iteração:</p>
+        <pre>
+          <code>
+      let meuArray = [1, 2, 3];
+      meuArray.push(4);
+      console.log(meuArray); // [1, 2, 3, 4]
+          </code>
+        </pre>
+
+        <h2>Propriedade <code>length</code></h2>
+        <p>
+          Os arrays têm uma propriedade <code>length</code> para obter o número
+          de elementos:
+        </p>
+        <pre>
+          <code>
+      let meuArray = [1, 2, 3];
+      console.log(meuArray.length); // 3
+          </code>
+        </pre>
+      </div>
+
+      <div class="box retangular pequena">
+        <h2>2. BigInt</h2>
+        <p>
+          O tipo <code>BigInt</code> foi introduzido em JavaScript para lidar
+          com números inteiros grandes que não podem ser representados com
+          precisão usando números regulares.
+        </p>
+        <pre>
+    <code>
+let numeroGrande = 1234567890123456789012345678901234567890n;
+    </code>
+  </pre>
+      </div>
+      <br />
+      <div class="box retangular pequena">
+        <h2>3. Strings</h2>
+        <p>
+          As strings representam sequências de caracteres e podem ser criadas
+          usando aspas simples ou duplas.
+        </p>
+        <pre>
+    <code>
+let stringComAspasSimples = 'Olá, mundo!';
+let stringComAspasDuplas = "JavaScript é incrível!";
+    </code>
+  </pre>
+      </div>
+      <div class="box retangular pequena">
+        <h2>4. Booleanos</h2>
+        <p>
+          Os booleanos representam valores verdadeiros ou falsos e são
+          frequentemente usados em avaliações condicionais.
+        </p>
+        <pre>
+    <code>
+let verdadeiro = true;
+let falso = false;
+    </code>
+  </pre>
+      </div>
+      <div class="box retangular pequena">
+        <h2>5. Null e Undefined</h2>
+        <p>
+          <code>null</code> é usado para representar a ausência intencional de
+          valor, enquanto <code>undefined</code> indica que uma variável foi
+          declarada, mas ainda não foi inicializada.
+        </p>
+        <pre>
+          <code>
+      let valorNulo = null;
+      let valorIndefinido;
+          </code>
+        </pre>
+      </div>
+      <div class="box retangular pequena">
+        <h2>6. NaN e Infinity</h2>
+        <p>
+          <code>NaN</code> (Not-a-Number) é usado para representar resultados
+          inválidos em operações matemáticas, enquanto
+          <code>Infinity</code> representa valores infinitos positivos e
+          <code>-Infinity</code> representa valores infinitos negativos.
+        </p>
+        <pre>
+          <code>
+      let resultadoInvalido = 10 / "abc"; // NaN
+      let infinitoPositivo = 1 / 0;      // Infinity
+      let infinitoNegativo = -1 / 0;     // -Infinity
+          </code>
+        </pre>
+      </div>
+      <div class="box retangular pequena">
+        <h2>7. Symbol</h2>
+        <p>
+          <code>Symbol</code> é um tipo de dado único e imutável que é usado
+          para criar identificadores exclusivos. Cada <code>Symbol</code> é
+          único, mesmo que seus valores sejam idênticos.
+        </p>
+        <pre>
+          <code>
+      const simbolo1 = Symbol('descricao');
+      const simbolo2 = Symbol('descricao');
+      console.log(simbolo1 === simbolo2); // false, porque são símbolos diferentes
+          </code>
+        </pre>
+      </div>
+      <div class="box retangular pequena">
+        <h2>1. Números</h2>
+        <p>
+          Os números em JavaScript podem ser inteiros ou de ponto flutuante.
+          Você pode usar operadores matemáticos padrão para realizar cálculos.
+        </p>
+        <pre>
+    <code>
+let numeroInteiro = 42;
+let numeroPontoFlutuante = 3.14;
+let numeroGrande = 123_456_789; // Notação com sublinhado para melhor legibilidade
+    </code>
+  </pre>
+      </div>
+    </div>
+  </body>
+</html>

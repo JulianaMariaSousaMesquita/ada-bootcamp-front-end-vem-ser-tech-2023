@@ -1,0 +1,74 @@
+body {
+  background: #dc2424; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4a569d,
+    #dc2424
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4a569d,
+    #dc2424
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  text-align: center; /* Centralizar todo o texto */
+  justify-content: center; /* Centralizar verticalmente */
+  align-items: center; /* Centralizar horizontalmente */
+  box-sizing: border-box; /* Inclui preenchimento na largura/altura total */
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: inherit; /* Herda a cor do texto do elemento pai (normalmente preto) */
+}
+
+.container {
+  text-align: center; /* Centralizar horizontalmente o conteúdo */
+}
+
+.box {
+  display: inline-block; /* Faz as caixas fluírem horizontalmente */
+  margin: 3px; /* Espaço entre as caixas */
+  overflow: auto; /* Adiciona barra de rolagem se necessário */
+}
+
+/* Caixa retangular */
+.retangular {
+  width: 50%;
+  border: 2px solid #fff; /* Borda preta */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Caixa oval na horizontal */
+.oval-horizontal {
+  width: 200px;
+  height: 100px;
+  background: #ffb75e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ed8f03,
+    #ffb75e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ed8f03,
+    #ffb75e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border: 2px solid #fff; /* Borda preta */
+  border-radius: 100px / 50px; /* Raio horizontal / Raio vertical */
+}
+
+/* Caixa pequena */
+.pequena {
+  width: 20%;
+}

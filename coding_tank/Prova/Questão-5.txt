@@ -1,0 +1,15 @@
+5 - Qual é o resultado da expressão booleana abaixo?
+!(true && false) || (false && true)
+a. true
+b. null
+c. false
+d. NaN
+e. undefined
+
+
+RESPOSTA:
+a. true
+
+Explicação: 
+ true && false da falso negando isso da true então não precisa nem continuar 
+o resto da expressão porque tem um || e ele só precisa ter um true para dar no final true.

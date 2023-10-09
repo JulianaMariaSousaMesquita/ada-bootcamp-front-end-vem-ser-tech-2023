@@ -1,0 +1,23 @@
+4 - Qual é a saída do código a seguir?
+let n = 4;
+for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+        console.log(j);
+    }
+}
+a. Não imprime nada
+b. 1 2 3
+c. 1 1 2 1 2 3 1 2 3
+d. 1 2 3 4
+e. 1 1 2 1 2 3 1 2 3 4
+
+
+RESPOSTA:
+e. 1 1 2 1 2 3 1 2 3 4
+
+Explicação: 
+O j ocorre de acordo com o valor que tem no i, quando o i vale 1 e o j 1, 
+ele imprimi 1 e sai do laço de repetição do j, quando o i vale 2, ele imprimi 1 e 2 e sai do laço do j, 
+porque o j vai sempre contar até o tamanho que o i vale, assim consecutivamente, sai do laço de 
+repetição do j, vai para o laço do i e soma + 1 no i, quando o i esta 3, o j imprime 1,2,3,
+ e assim consecutivamente até chegar  no valor de n que é 2, assim quando o i é 4 ele vai imprimir 1,2,3,4.

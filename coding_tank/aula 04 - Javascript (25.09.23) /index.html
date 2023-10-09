@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 01 - Introdução a JavaScript</title>
+    <script type="text/javascript" src="index.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box oval-horizontal">
+        <h1>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+            target="_blank"
+            >JavaScript</a
+          >
+        </h1>
+      </div>
+      <br />
+      <div class="box retangular pequena">
+        <h1>Tipos de Dados em JavaScript</h1>
+        <p>
+          JavaScript é uma linguagem de programação dinamicamente tipada, o que
+          significa que as variáveis podem conter diferentes tipos de dados em
+          momentos diferentes durante a execução do programa. Existem vários
+          tipos de dados em JavaScript, e eles podem ser divididos em categorias
+          principais, incluindo números, strings, booleanos, objetos, e valores
+          especiais. Vamos explorar cada um deles.
+        </p>
+        <button
+          onclick="document.body.innerHTML += ' <p>adicionando alguma coisa</p>'"
+        >
+          Botão
+        </button>
+      </div>
+      <div class="box retangular"></div>
+
+      <div class="box retangular">
+        <h1>Operadores Lógicos</h1>
+        <p>
+          '&&' (E lógico): Este operador retorna true se ambos os operandos
+          forem verdadeiros. Exemplo:
+        </p>
+        <code>
+          <pre>
+            let a = true;
+            let b = false;
+            let resultado = a && b; // resultado será igual a false
+          </pre>
+        </code>
+        <p>
+          '||' (OU lógico): Este operador retorna true se pelo menos um dos
+          operandos for verdadeiro. Exemplo:
+        </p>
+        <code>
+          <pre>
+            let a = true; 
+            let b = false; 
+            let resultado = a || b; // resultado será igual a true
+          </pre>
+        </code>
+        <p>
+          '!' (Negação lógica): Este operador inverte o valor de verdade de um
+          operando. Exemplo:
+        </p>
+        <code>
+          <pre>
+            let a = true; 
+            let resultado = !a; // resultado será igual a false
+          </pre>
+        </code>
+      </div>
+
+      <div class="box retangular pequena">
+        <h1>Operadores Aritméticos</h1>
+        <p>
+          '+' (Adição): Este operador é usado para somar números ou concatenar
+          strings. Exemplo:
+        </p>
+        <code>
+          <pre>
+            let a = 5; 
+            let b = 10; 
+            let resultado = a + b; // resultado será igual a 15
+          </pre>
+        </code>
+      </div>
+      <br />
+      <div class="box retangular pequena">
+        <h1>Operadores Aritméticos</h1>
+        <p>
+          '-' (Subtração): Este operador é usado para subtrair números. Exemplo:
+        </p>
+        <code>
+          <pre>
+            let a = 10; 
+            let b = 5; 
+            let resultado = a - b; // resultado será igual a 5
+          </pre>
+          
+        </code>
+      </div>
+      <div class="box retangular pequena">
+        <h1>Operadores Aritméticos</h1>
+        <p>
+          '/' (Divisão): Este operador é usado para dividir números. Exemplo:
+        </p>
+        <code>
+          let a = 10; let b = 2; let resultado = a / b; // resultado será igual
+          a 5
+        </code>
+      </div>
+      <div class="box retangular pequena">
+        <h1>Operadores Aritméticos</h1>
+        <p>
+          '*' (Multiplicação): Este operador é usado para multiplicar números.
+          Exemplo:
+        </p>
+        <code>
+          let a = 5; let b = 3; let resultado = a * b; // resultado será igual a
+          15
+        </code>
+      </div>
+      <div class="box retangular pequena">
+        <h1>Operadores Aritméticos</h1>
+        <p>
+          '**' (Potência): Este operador é usado para calcular a potência de um
+          número. Exemplo:
+        </p>
+        <code>
+          let a = 2; let b = 3; let resultado = a ** b; // resultado será igual
+          a 8 (2 elevado à 3ª potência)
+        </code>
+      </div>
+      <div class="box retangular pequena">
+        <h1>Operadores Aritméticos</h1>
+        <p>
+          '%' (Módulo): Este operador é usado para obter o resto da divisão de
+          um número por outro. Exemplo:
+        </p>
+        <code>
+          let a = 10; let b = 3; let resultado = a % b; // resultado será igual
+          a 1 (resto da divisão de 10 por 3)
+        </code>
+      </div>
+      <div class="box retangular pequena">
+        <h1>Operadores Aritméticos</h1>
+        <p>
+          '++' (Incremento) e '--' (Decremento): São operadores usados para
+          aumentar ou diminuir o valor de uma variável em 1, respectivamente.
+        </p>
+        <code>
+          let contador = 5; contador++; // Incrementa o contador em 1 (agora
+          contador é 6) contador--; // Decrementa o contador em 1 (agora
+          contador é 5 novamente)
+        </code>
+      </div>
+    </div>
+  </body>
+</html>
