@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Processamento de Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script>
+      // Função para processar o envio do formulário de login
+      function processarLogin() {
+        // Lógica de autenticação do usuário (substitua isso pela sua lógica real)
+        var usuario = document.getElementById("usuario").value;
+        var senha = document.getElementById("senha").value;
+
+        if (usuario === "seu_usuario" && senha === "sua_senha") {
+          // Exibe a mensagem de login bem-sucedido
+          document.getElementById("mensagem-sucesso").style.display = "block";
+          // Oculta o formulário de login
+          document.getElementById("formulario-login").style.display = "none";
+        } else {
+          // Tratamento para login inválido (substitua isso pela sua lógica real)
+          alert("Login falhou. Verifique suas credenciais.");
+        }
+
+        // Impede o envio padrão do formulário
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <form
+        id="formulario-login"
+        method="post"
+        onsubmit="return processarLogin();"
+      >
+        <!-- Campos de login (usuário e senha) -->
+        <div class="form-group">
+          <label for="usuario">Nome de Usuário:</label>
+          <input type="text" id="usuario" name="usuario" required />
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required />
+        </div>
+        <input type="submit" value="Login" />
+      </form>
+      <div id="mensagem-sucesso" style="display: none">
+        <h2>Login Bem-Sucedido</h2>
+        <p>O login foi processado com sucesso.</p>
+      </div>
+    </div>
+  </body>
+</html>
