@@ -15,14 +15,6 @@ function updateFieldsVisibility() {
   countrySelect.required = nationality === "foreign";
 }
 
-// Função para deletar uma entrada por ID
-function deleteEntry(id) {
-  fetch("https://crudcrud.com/api/e1000cc527734c10ad45fc1b23a39872/users/" + id, {
-    method: "DELETE",
-  })
-    .then(refreshTable);
-}
-
 // Função para preencher a tabela de dados
 function populateTable(data) {
   const tbody = document.querySelector("#data-table tbody");
@@ -38,15 +30,6 @@ function populateTable(data) {
       row.appendChild(cell);
     });
 
-    const deleteCell = document.createElement("td");
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Deletar";
-    deleteButton.addEventListener("click", () => {
-      deleteEntry(entry._id);
-    });
-    deleteCell.appendChild(deleteButton);
-    row.appendChild(deleteCell);
-
     tbody.appendChild(row);
   });
 }
@@ -55,6 +38,9 @@ function populateTable(data) {
 function refreshTable() {
   fetch("https://crudcrud.com/api/e1000cc527734c10ad45fc1b23a39872/users/", {
     method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
   })
     .then((response) => response.json())
     .then((data) => populateTable(data))
@@ -84,5 +70,9 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
     });
 });
 
+refreshTable();
+
 // Event listener para alterações na seleção de nacionalidade
 document.getElementById("nationality").addEventListener("change", updateFieldsVisibility);
+
+refreshTable();
