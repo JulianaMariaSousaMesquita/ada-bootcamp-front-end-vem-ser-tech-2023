@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
+
+body {
+  font-family: "Ranchers", sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff; /* Definir as letras em branco */
+  font-size: 15px;
+}
+
+form {
+  margin: 20px auto;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid transparent; /* Inicialmente, uma borda transparente */
+  border-image-source: linear-gradient(
+    to right,
+    #92fe9d,
+    #00c9ff
+  ); /* Gradiente para a borda */
+  border-image-slice: 1; /* Define a largura da borda */
+  animation: borderAnimation 5s linear infinite; /* Animação da borda */
+  transition: border 0.5s; /* Transição para a cor da borda quando o mouse passar sobre o formulário */
+}
+
+label {
+  display: block;
+  margin-left: 20px;
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+input,
+select {
+  width: calc(100% - 60px); /* Reduza 20px para acomodar a borda */
+  padding: 10px;
+  margin-top: 5px;
+}
+
+input:focus,
+select:focus {
+  border: 2px solid transparent; /* Inicialmente, uma borda transparente */
+  border-image-source: linear-gradient(
+    to right,
+    #92fe9d,
+    #00c9ff
+  ); /* Gradiente para a borda */
+  border-image-slice: 1; /* Define a largura da borda */
+  transition: border 0.3s; /* Adicionar transição para a mudança de cor da borda */
+  outline: none; /* Remova a aparência padrão do foco (destaque) */
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background: #00c9ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #92fe9d,
+    #00c9ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #92fe9d,
+    #00c9ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s; /* Adicionar transição para a mudança de cor */
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+button:hover {
+  background: #73c8a9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #373b44,
+    #73c8a9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #373b44,
+    #73c8a9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#data-table {
+  display: none; /* Ocultar a tabela inicialmente */
+}

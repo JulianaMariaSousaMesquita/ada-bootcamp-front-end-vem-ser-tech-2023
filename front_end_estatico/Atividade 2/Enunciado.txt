@@ -1,0 +1,12 @@
+HTML + CSS + HTTP - ATIVIDADE 2  (11/10/2023)
+
+- Criar um formulário;
+- Utilizar  labels com for para cada input;
+- Utilizar as propriedades id e name;
+- Utilizar pelo menos 5 tipos de inputs diferentes;
+- Deverá ter validações de campos antes de enviar o formulário;
+- Utilizar uma API para registrar os dados;
+- Recuperar os dados da API e listar em uma tabela.
+
+https://crudcrud.com/
+https://nocodeform.io/
