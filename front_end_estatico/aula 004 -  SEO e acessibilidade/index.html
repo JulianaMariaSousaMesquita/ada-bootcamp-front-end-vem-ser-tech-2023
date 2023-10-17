@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Produtos - FastFoodFamily</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>FastFoodFamily - Catálogo de Produtos</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="inicio">
+        <h2>Boas-vindas ao FastFoodFamily</h2>
+        <p>
+          Descubra os melhores pratos e produtos de fast food em nosso catálogo.
+        </p>
+      </section>
+
+      <section id="produtos">
+        <h2>Produtos em Destaque</h2>
+        <article>
+          <h3>Hambúrguer Clássico</h3>
+          <p>Um hambúrguer suculento com queijo, alface e molho especial.</p>
+          <figure>
+            <img src="hamburguer-classico.jpg" alt="Hambúrguer Clássico" />
+            <figcaption>Hambúrguer Clássico</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h3>Porção de Batata Frita</h3>
+          <p>Uma porção generosa de batatas fritas crocantes.</p>
+          <figure>
+            <img src="batata-frita.jpg" alt="Porção de Batata Frita" />
+            <figcaption>Porção de Batata Frita</figcaption>
+          </figure>
+        </article>
+      </section>
+    </main>
+
+    <section id="contato">
+      <h1>Contato</h1>
+      <aside>
+        <div class="left">
+          <p>FastFoodFamily</p>
+          <p>Email: contato@FastFoodFamily.com</p>
+          <p>Telefone: 0800 26276431</p>
+        </div>
+        <div class="right">
+          <form action="processar_formulario.php" method="post">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem:</label>
+              <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 FastFoodFamily. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
