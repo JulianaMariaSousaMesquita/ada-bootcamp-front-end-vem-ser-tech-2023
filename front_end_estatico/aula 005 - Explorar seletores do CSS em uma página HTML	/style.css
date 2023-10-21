@@ -1,0 +1,112 @@
+/* Estilizando o body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilizando o header */
+header {
+    background: #114357; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #F29492, #114357); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #F29492, #114357); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#titulo-principal {
+    font-size: 36px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+}
+
+/* Estilizando o main */
+main {
+    margin: 20px;
+    padding-top: 70px; /* Para dar espaço para o cabeçalho fixo */
+}
+
+.secao-titulo {
+    font-size: 24px;
+}
+
+/* Posicionamento de Texto */
+section {
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Exemplos de posicionamento de texto */
+/* Static (posição padrão) */
+section:nth-child(1) {
+    position: static;
+}
+
+/* Relative (em relação à posição original) */
+section:nth-child(2) {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+/* Fixed (em relação à janela de visualização) */
+footer {
+    background: #114357; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #F29492, #114357); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #F29492, #114357); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Sticky (inicialmente posicionado como static e muda para fixed ao rolar) */
+section:nth-child(5) {
+    position: sticky;
+    top: 20px;
+    background-color: #eee;
+}
+
+/* Estilizando o header */
+header {
+    background: #114357;
+    background: -webkit-linear-gradient(to bottom, #F29492, #114357);
+    background: linear-gradient(to bottom, #F29492, #114357);
+    color: #fff;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#titulo-principal {
+    font-size: 36px;
+}
+
+/* Estilizando o menu */
+nav ul {
+    list-style: none; /* Remover marcadores de lista */
+    padding: 0;
+    text-align: center;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+    display: inline-block; /* Exibir itens ao lado um do outro */
+}
