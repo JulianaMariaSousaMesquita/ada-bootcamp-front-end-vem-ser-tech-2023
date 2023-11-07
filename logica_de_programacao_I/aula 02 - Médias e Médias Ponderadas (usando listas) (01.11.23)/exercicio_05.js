@@ -20,6 +20,7 @@ function mediaMatriz(matriz) {
     return (soma/totalElementos);
   }
   
+
   const notas = [
     [17, 28, 11],
     [46, 39, 44],

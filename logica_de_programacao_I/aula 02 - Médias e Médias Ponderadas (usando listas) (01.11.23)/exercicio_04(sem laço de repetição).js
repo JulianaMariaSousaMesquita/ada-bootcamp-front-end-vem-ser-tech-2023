@@ -6,7 +6,7 @@
 //   [5, 8, 10]
 // ];
 
-function somaMatriz(matriz) {
+function produtoMatriz(matriz) {
   return matriz.flat().reduce((acumulador, valorAtual) => acumulador * valorAtual, 1);
 }
 
@@ -16,5 +16,5 @@ const matriz = [
     [5, 8, 10]
   ];
 
-const resultado = somaMatriz(matriz);
+const resultado = produtoMatriz(matriz);
 console.log(resultado);

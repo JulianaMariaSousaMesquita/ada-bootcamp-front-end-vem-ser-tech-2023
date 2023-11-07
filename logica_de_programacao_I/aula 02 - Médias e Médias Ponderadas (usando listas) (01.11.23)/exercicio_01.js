@@ -8,9 +8,12 @@ function soma (numeros, indice=0) {
     }
     return numeros[indice] + soma(numeros, indice + 1);
 }
-const total = soma([10, 5, 8, 12, 3, 19]);
-console.log(total);
 
+const numeros = [10, 5, 8, 12, 3, 19];
+console.log(numeros[0]+numeros[1]+numeros[2]+numeros[3]+numeros[4]+numeros[5]);
+
+const total = soma(numeros);
+console.log(total);
 console.log(soma([5, 5, 20]));
 console.log(soma([10, 5]));
 console.log(soma([5]));
