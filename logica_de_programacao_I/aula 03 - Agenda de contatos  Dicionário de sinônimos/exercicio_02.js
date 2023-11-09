@@ -30,5 +30,6 @@ adicionarContato('Kiba Inuzuka', '(00) 22222-5555', { rua: 'Rua dos Cães', nume
 adicionarContato('Choji Akimichi', '(00) 44444-9999', { rua: 'Rua das Comidas', numero: '35', bairro: 'Konoha' }, '1987-05-01');
 adicionarContato('Temari', '(00) 11111-8888', { rua: 'Rua Ventosa', numero: '30', bairro: 'Vila da Areia' }, '1986-08-23');
 adicionarContato('Gaara', '(00) 12345-6789', { rua: 'Rua do Kazekage', numero: '1', bairro: 'Vila da Areia' }, '1985-01-19');
-
+adicionarContato('Boruto Uzumaki', '(00) 99999-9999', { rua: 'Rua do Hokage', numero: '1', bairro: 'Vila da Folha' }, '2005-03-27');
+adicionarContato('Himawari Uzumaki', '(00) 88888-8888', { rua: 'Rua do Hokage', numero: '1', bairro: 'Vila da Folha' }, '2008-06-20');
 console.log(listaDeContatos);
