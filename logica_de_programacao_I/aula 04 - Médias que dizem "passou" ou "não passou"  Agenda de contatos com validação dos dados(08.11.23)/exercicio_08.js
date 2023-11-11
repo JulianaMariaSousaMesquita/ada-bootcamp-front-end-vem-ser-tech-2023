@@ -1,7 +1,7 @@
 // 8 - Exercício Intermediário: Escreva um programa em JavaScript que recebe uma letra do alfabeto e retorna se é uma vogal ou uma consoante.  Utilize a estrutura switch/case para realizar essa verificação.
 
 function alfabeto(letra) {
-  switch (letra) {
+  switch (letra.toLocaleLowerCase()) {
     case "a":
     case "e":
     case "i":

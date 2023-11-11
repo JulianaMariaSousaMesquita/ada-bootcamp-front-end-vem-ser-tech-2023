@@ -15,6 +15,7 @@ function calculadora(numero1, numero2, operacao) {
     case "multiplicar":
       return numero1 * numero2;
       break;
+    default: "Opção invalida"
   }
 }
 

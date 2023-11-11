@@ -50,3 +50,26 @@ console.log(mesCorrespondente('05'))
 console.log(mesCorrespondente('12'))
 console.log(mesCorrespondente('40'))
 
+
+
+const numeroDoMes = 11;
+const mes = {
+  1: "Janeiro",
+  2: "Fevereiro",
+  3: "Março",
+  4: "Abril",
+  5: "Maio",
+  6: "Junho",
+  7: "Julho",
+  8: "Agosto",
+  9: "Setembro",
+  10: "Outubro",
+  11: "Novembro",
+  12: "Dezembro",
+};
+if(numeroDoMes > 0 && numeroDoMes < 13){
+  console.log(mes[numeroDoMes]);
+} else console.log(
+  "Número inválido"
+)
+
