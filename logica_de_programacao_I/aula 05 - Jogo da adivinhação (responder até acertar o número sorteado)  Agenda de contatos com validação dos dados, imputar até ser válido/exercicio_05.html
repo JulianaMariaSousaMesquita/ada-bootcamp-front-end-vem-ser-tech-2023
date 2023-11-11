@@ -1,0 +1,118 @@
+<!-- 5. **Exercicios Desafiador:**
+     Escreva um programa em JavaScript cria uma lista de contatos, com dados inputados pelo usuário, dados para salvar:
+    - Nome
+     - Telefone
+     - Idade
+     - Profissão
+     O usuário deve inputar dados de 5 contatos.
+     Ao final o programa deve mostrar uma lista com os contatos. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Contatos</title>
+    <style>
+      body {
+        background: #43cea2;
+        background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
+        background: linear-gradient(to right, #185a9d, #43cea2);
+        color: white;
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      h1,
+      h2,
+      form,
+      table {
+        margin: 20px auto;
+        max-width: 600px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid white;
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulário de Contatos</h1>
+
+    <form id="contatoForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required /><br />
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" required /><br />
+
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" required /><br />
+
+      <label for="profissao">Profissão:</label>
+      <input type="text" id="profissao" required /><br />
+
+      <button type="button" onclick="adicionarContato()">
+        Adicionar Contato
+      </button>
+    </form>
+
+    <div id="contatosContainer" style="display: none">
+      <h2>Lista de Contatos</h2>
+      <table id="listaContatos">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Idade</th>
+            <th>Profissão</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script>
+      function adicionarContato() {
+        var nome = document.getElementById("nome").value;
+        var telefone = document.getElementById("telefone").value;
+        var idade = document.getElementById("idade").value;
+        var profissao = document.getElementById("profissao").value;
+
+        var contato = {
+          nome: nome,
+          telefone: telefone,
+          idade: idade,
+          profissao: profissao,
+        };
+
+        var tabelaContatos = document
+          .getElementById("listaContatos")
+          .getElementsByTagName("tbody")[0];
+        var newRow = tabelaContatos.insertRow(tabelaContatos.rows.length);
+        var cellNome = newRow.insertCell(0);
+        var cellTelefone = newRow.insertCell(1);
+        var cellIdade = newRow.insertCell(2);
+        var cellProfissao = newRow.insertCell(3);
+
+        cellNome.textContent = contato.nome;
+        cellTelefone.textContent = contato.telefone;
+        cellIdade.textContent = contato.idade;
+        cellProfissao.textContent = contato.profissao;
+
+        document.getElementById("contatoForm").reset();
+        document.getElementById("contatosContainer").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
