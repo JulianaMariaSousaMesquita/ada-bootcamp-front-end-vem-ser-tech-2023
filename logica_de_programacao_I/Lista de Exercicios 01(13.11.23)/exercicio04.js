@@ -22,4 +22,14 @@ const alunos = [
   { nome: 'Julia', notas: [10, 8, 9] }
 ]
 
-const media = alunos.map()
+const mediasDosAlunos = alunos.map(aluno => {
+  const somaNotas = aluno.notas.reduce((acc, nota) => acc + nota, 0)
+  const media = somaNotas / aluno.notas.length
+
+  return {
+    nome: aluno.nome,
+    media: media.toFixed(2)
+  }
+})
+
+console.log(mediasDosAlunos)
