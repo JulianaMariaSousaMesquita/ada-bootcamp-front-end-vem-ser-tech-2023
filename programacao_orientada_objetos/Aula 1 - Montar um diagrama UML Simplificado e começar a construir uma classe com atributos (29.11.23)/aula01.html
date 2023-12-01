@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1 - Programação Orientada a Objetos</title>
+</head>
+
+<body>
+    <script>
+        // Passo 1: Montar um diagrama UML simplificado e começar a construir uma classe com atributos
+
+        // Definindo a classe Carro
+        class Carro {
+            // Passo 2: Atributos como características que ajudam a definir um objeto
+            constructor(marca, modelo, cor) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.cor = cor;
+                this.velocidade = 0; // Atributo adicional
+            }
+
+            // Método para acelerar o carro
+            acelerar() {
+                this.velocidade += 10;
+                console.log(`${this.modelo} acelerou para ${this.velocidade} km/h.`);
+            }
+        }
+
+        // Passo 3: Explicação sobre TADs e abstração de dados no geral
+        // - A classe Carro é um exemplo de um Tipo Abstrato de Dados (TAD) que representa um carro.
+
+        // Passo 4: Atributos existentes podem ser acessados e sobrescritos, enquanto novos podem ser adicionados a objetos
+        const meuCarro = new Carro("Toyota", "Corolla", "Prata");
+        console.log(`Meu carro é um ${meuCarro.marca} ${meuCarro.modelo} ${meuCarro.cor}.`);
+
+        // Atributo existente sendo acessado
+        console.log(`Velocidade inicial: ${meuCarro.velocidade} km/h.`);
+
+        // Atributo existente sendo sobrescrito
+        meuCarro.velocidade = 20;
+        console.log(`Nova velocidade: ${meuCarro.velocidade} km/h.`);
+
+        // Atributo novo sendo adicionado
+        meuCarro.peso = 1200; // Isso não afeta a classe original, apenas esta instância específica.
+        console.log(`Peso do carro: ${meuCarro.peso} kg.`);
+
+        // Passo 5: Diferença entre objetos e instâncias de uma classe
+        // - 'meuCarro' é uma instância da classe 'Carro'.
+
+        // Passo 6: Espaço para a realização da atividade de fixação
+        // - Os alunos podem praticar criando suas próprias classes e objetos.
+
+        // Estudo de caso: Modelar e Implementar as classes carro, cachorro, etc.
+        class Cachorro {
+            constructor(nome, raca, idade) {
+                this.nome = nome;
+                this.raca = raca;
+                this.idade = idade;
+            }
+
+            latir() {
+                console.log(`${this.nome} está latindo!`);
+            }
+        }
+
+        const meuCachorro = new Cachorro("Rex", "Labrador", 3);
+        meuCachorro.latir();
+
+        // Prática: Atividade de fixação 1 (escopo fechado)
+        class FormaGeometrica {
+            constructor(tipo, cor, lado1 = 0, lado2 = 0, lado3 = 0) {
+                this.tipo = tipo;
+                this.cor = cor;
+                this.lado1 = lado1;
+                this.lado2 = lado2;
+                this.lado3 = lado3;
+            }
+
+            calcularArea() {
+                // Lógica para calcular a área da forma geométrica
+                return 0;
+            }
+        }
+
+        const quadrado = new FormaGeometrica("Quadrado", "Azul", 5);
+        console.log(`Área do quadrado: ${quadrado.calcularArea()}`);
+    </script>
+</body>
+
+</html>
