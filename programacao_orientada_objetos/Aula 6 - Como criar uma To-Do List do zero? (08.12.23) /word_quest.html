@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordQuest - Jogo de Palavras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    form {
+      display: inline-block;
+      text-align: left;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>WordQuest - Jogo de Palavras</h1>
+
+  <div id="resultado"></div>
+
+  <form id="jogo-form">
+    <h2>Jogar WordQuest</h2>
+    <label for="palavra">Insira uma Palavra:</label>
+    <input type="text" id="palavra" name="palavra" required>
+    <br>
+    <button type="button" onclick="verificarPalavra()">Verificar Palavra</button>
+  </form>
+
+  <script>
+    class JogoDePalavras {
+      jogar(palavra) {
+        const palavraCorreta = "mágica"
+        return palavra === palavraCorreta
+      }
+    }
+
+    function verificarPalavra() {
+      const palavraInserida = document.getElementById("palavra").value.toLowerCase()
+      const jogo = new JogoDePalavras()
+      const resultadoDiv = document.getElementById("resultado")
+
+      if (jogo.jogar(palavraInserida)) {
+        resultadoDiv.textContent = "Parabéns! Você encontrou a palavra mágica!"
+        resultadoDiv.style.color = "green"
+      } else {
+        resultadoDiv.textContent = "Tente novamente! Essa não é a palavra correta."
+        resultadoDiv.style.color = "red"
+      }
+    }
+  </script>
+
+</body>
+</html>

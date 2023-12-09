@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinPOO - Sistema Bancário</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    form {
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>FinPOO - Sistema Bancário</h1>
+
+  <div id="conta-info">
+    <h2>Informações da Conta</h2>
+    <p id="titular"></p>
+    <p id="saldo"></p>
+  </div>
+
+  <form id="operacao-form">
+    <h2>Realizar Operação</h2>
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" name="valor" required>
+    <br>
+    <button type="button" onclick="realizarDeposito()">Depositar</button>
+    <button type="button" onclick="realizarSaque()">Sacar</button>
+  </form>
+
+  <script>
+    const conta = new Conta("Fulano")
+    atualizarInformacoesConta()
+
+    function realizarDeposito() {
+      const valor = parseFloat(document.getElementById("valor").value)
+      if (!isNaN(valor)) {
+        conta.depositar(valor)
+        atualizarInformacoesConta()
+      } else {
+        alert("Por favor, insira um valor válido.")
+      }
+    }
+
+    function realizarSaque() {
+      const valor = parseFloat(document.getElementById("valor").value)
+      if (!isNaN(valor)) {
+        conta.sacar(valor)
+        atualizarInformacoesConta()
+      } else {
+        alert("Por favor, insira um valor válido.")
+      }
+    }
+
+    function atualizarInformacoesConta() {
+      document.getElementById("titular").textContent = `Titular: ${conta.titular}`
+      document.getElementById("saldo").textContent = `Saldo: R$ ${conta.saldo.toFixed(2)}`
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #task-input {
+      margin-bottom: 10px;
+    }
+
+    #task-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 5px;
+    }
+
+    .delete-button {
+      background-color: #ff5c5c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>To-Do List</h1>
+
+  <form id="task-form">
+    <label for="task-input">Nova Tarefa:</label>
+    <input type="text" id="task-input" name="task" required>
+    <button type="button" onclick="addTask()">Adicionar</button>
+  </form>
+
+  <ul id="task-list"></ul>
+
+  <script>
+    function addTask() {
+      const taskInput = document.getElementById("task-input")
+      const taskList = document.getElementById("task-list")
+
+      if (taskInput.value.trim() !== "") {
+        const taskItem = document.createElement("li")
+        taskItem.className = "task-item"
+        taskItem.innerHTML = `
+          <span>${taskInput.value}</span>
+          <button class="delete-button" onclick="deleteTask(this)">Excluir</button>
+        `
+        taskList.appendChild(taskItem)
+        taskInput.value = ""
+      }
+    }
+
+    function deleteTask(button) {
+      const taskItem = button.parentNode
+      const taskList = document.getElementById("task-list")
+      taskList.removeChild(taskItem)
+    }
+  </script>
+
+</body>
+</html>
