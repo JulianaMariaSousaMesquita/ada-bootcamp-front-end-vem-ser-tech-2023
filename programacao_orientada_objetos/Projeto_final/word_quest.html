@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Quest - Projeto Final</title>
+    <script defer src="word_quest.js"></script>
+</head>
+
+<body>
+    <button onclick="iniciarJogo('facil')">Modo Fácil</button>
+    <button onclick="iniciarJogo('intermediario')">Modo Intermediário</button>
+    <button onclick="iniciarJogo('dificil')">Modo Difícil</button>
+    <button onclick="iniciarJogo('pesadelo')">Modo Pesadelo</button>
+
+    <div id="jogo-container" style="display: none;">
+        <input type="text" id="letraInput" maxlength="1">
+        <button onclick="tentarPalavra()">Tentar</button>
+    </div>
+</body>
+
+</html>
