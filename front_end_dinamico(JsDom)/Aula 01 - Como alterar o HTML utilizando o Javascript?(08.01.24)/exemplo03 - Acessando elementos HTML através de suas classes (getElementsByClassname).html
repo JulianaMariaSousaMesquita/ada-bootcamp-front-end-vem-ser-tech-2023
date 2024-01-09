@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessar Elemento por Classe</title>
+  <style>
+    .minhaClasse {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="minhaClasse">Este parágrafo possui a classe "minhaClasse".</p>
+
+  <script>
+    // Acessando elementos por classe e alterando o estilo
+    var elementos = document.getElementsByClassName("minhaClasse");
+    for (var i = 0; i < elementos.length; i++) {
+      elementos[i].style.fontWeight = "bold";
+    }
+  </script>
+
+</body>
+</html>

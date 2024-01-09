@@ -1,0 +1,26 @@
+<!-- Exemplo com querySelector -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>querySelector Exemplo</title>
+  <style>
+    .destaque {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="paragrafo1" class="destaque">Parágrafo 1</p>
+  <p id="paragrafo2">Parágrafo 2</p>
+
+  <script>
+    // Usando querySelector para selecionar o primeiro parágrafo com a classe "destaque"
+    var paragrafoDestaque = document.querySelector(".destaque");
+    paragrafoDestaque.innerHTML = "Este parágrafo está em destaque!";
+  </script>
+
+</body>
+</html>
