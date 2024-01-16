@@ -1,0 +1,68 @@
+:root{
+    --color-primary: #ffa500;
+    --color-secondary: #565656; 
+    --color-light: #ffffff;
+    --color-dark: #000000;
+
+    .light-mode{
+        --color1: var(--color-dark);
+        --color2: var(--color-light);      
+    }
+
+    .dark-mode{
+        --color1: var(--color-light);
+        --color2: var(--color-dark);      
+    }
+
+    .primary-mode{
+        --color1: var(--color-primary);
+        --color2: var(--color-secondary);      
+    }
+}
+
+body {
+    color: var(--color1);
+    background-color: var(--color2);
+    text-align: center;
+}
+
+p, h1, h2, h3 {
+    color: var(--color1);
+}
+
+button {
+    border-radius: 50%;
+    background-color: var(--color1); /* Cor principal */
+    color: var(--color2); /* Cor do texto */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px; /* Centraliza verticalmente o texto */
+    text-decoration: none; /* Remove sublinhado padrão em links */
+    display: inline-block;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+    background-color: var(--color2);/* Cor ao passar o mouse */
+    color: var(--color1); /* Cor do texto */
+    }
+
+    button:active {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); /* Efeito de pressionar o botão */
+    }
+
+    .borda {
+        border: 2px solid var(--color1);
+        padding: 10px;
+        margin: 10px;
+    }
+   
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #back-to-top{
+        cursor: pointer;            
+    }        
