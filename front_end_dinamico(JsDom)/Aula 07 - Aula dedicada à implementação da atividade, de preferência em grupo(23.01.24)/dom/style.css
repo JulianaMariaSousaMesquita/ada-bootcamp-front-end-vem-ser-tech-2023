@@ -1,0 +1,25 @@
+:root{
+    --cor1-light: #000000;
+    --cor2-light: #ffffff;
+
+    --cor1-dark: #ffffff;
+    --cor2-dark: #3a3a3a;
+
+    .light{
+        --color1: var( --cor1-light);
+        --color2:var(  --cor2-light);
+    }
+    .dark{
+        --color1: var( --cor1-dark);
+        --color2:var(  --cor2-dark);
+    }
+}
+
+body{
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+.destaque{
+    border: 2px solid green;
+}
