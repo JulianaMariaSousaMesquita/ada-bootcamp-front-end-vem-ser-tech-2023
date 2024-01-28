@@ -1,0 +1,34 @@
+{
+  "courses": [
+    {
+      "id": 0,
+      "urlImage": "https://picsum.photos/id/1043/800/600",
+      "name": "Lógica com Javscript"
+    },
+    {
+      "id": 1,
+      "urlImage": "https://picsum.photos/id/1043/800/600",
+      "name": "OOP com Javascript"
+    },
+    {
+      "id": 2,
+      "urlImage": "https://picsum.photos/id/1043/800/600",
+      "name": "Frontend Puro (Vanilla)"
+    },
+    {
+      "id": 3,
+      "urlImage": "https://picsum.photos/id/1043/800/600",
+      "name": "Frontend com Build"
+    },
+    {
+      "id": 4,
+      "urlImage": "https://picsum.photos/id/1043/800/600",
+      "name": "Frontend com Angular"
+    },
+    {
+      "id": 5,
+      "urlImage": "https://picsum.photos/id/1043/800/600",
+      "name": "Frontend com Ionic"
+    }
+  ]
+}
